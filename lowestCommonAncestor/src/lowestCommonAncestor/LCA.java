@@ -1,7 +1,10 @@
 package lowestCommonAncestor;
 
-public class LCA {
-//jiijii
+import org.w3c.dom.Node;
+
+public class LCA <Key extends Comparable<Key>, Value>{
+	Node root; 
+	
+
 }
 
-//hihihi
