@@ -27,6 +27,7 @@ public class LCA <Key extends Comparable<Key>, Value>{
 	}
 	
 		private int size(Node x) {
+			// returns the number of key valued pairs rooted at x in the BST
 			if (x == null) return 0;
 
 			else return x.N;
