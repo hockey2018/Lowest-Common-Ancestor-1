@@ -46,6 +46,23 @@ public class LCA <Key extends Comparable<Key>, Value>{
 			return null;
 		}
 
-
+	
+		public void put(Key key, Value val) {
+			if (val == null) { 
+				delete(key); return; 
+				}
+				root = put(root, key, val);
+		}
+		
+		
+		private LCA<Key, Value>.Node put(LCA<Key, Value>.Node root2, Key key, Value val) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		private void delete(Key key) {
+			// TODO Auto-generated method stub
+			
+		}
 }
 
