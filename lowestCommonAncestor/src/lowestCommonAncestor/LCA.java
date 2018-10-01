@@ -48,6 +48,7 @@ public class LCA <Key extends Comparable<Key>, Value>{
 
 	
 		public void put(Key key, Value val) {
+			//insert key value pair into BST, if it already exists update it 
 			if (val == null) { 
 				delete(key); return; 
 				}
