@@ -38,7 +38,10 @@ public class LCA <Key extends Comparable<Key>, Value>{
 			return get(key) != null;
 		}
 		
-		private Object get(Key key) {
+		public Value get(Key key) { 
+			return get(root, key); 
+		}
+		private Value get(LCA<Key, Value>.Node root2, Key key) {
 			// TODO Auto-generated method stub
 			return null;
 		}
