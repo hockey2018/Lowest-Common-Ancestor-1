@@ -32,6 +32,16 @@ public class LCA <Key extends Comparable<Key>, Value>{
 
 			else return x.N;
 		}
+		
+		public boolean contains(Key key) {
+			return get(key) != null;
+		}
+		
+		private Object get(Key key) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 
 }
 
