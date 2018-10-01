@@ -4,7 +4,7 @@ import org.w3c.dom.Node;
 
 public class LCA <Key extends Comparable<Key>, Value>{
 	Node root; 
-	
+	//this is the class for the lowest common ancestor 
 	class Node {
 		private Key key;           				
 		private Value val;         				
