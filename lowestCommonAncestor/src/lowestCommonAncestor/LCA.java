@@ -22,8 +22,8 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		return size() == 0; 
 	}
 	private int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size(); //root
+		
 	}
 
 }
