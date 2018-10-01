@@ -72,5 +72,16 @@ public class LCA <Key extends Comparable<Key>, Value>{
 			node.N = 1 + size(node.left) + size(node.right); // value child1 + value child2 + 1
 			return node;
 		}
+		
+		//tree height- asymptopic worst case running time
+
+		public int height() { 
+			return height(root); 
+		}
+		private int height(LCA<Key, Value>.Node root2) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
 }
 
