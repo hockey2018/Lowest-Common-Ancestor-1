@@ -34,6 +34,7 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		}
 		
 		public boolean contains(Key key) {
+			//search BST for a given tree, return true of found or else return false
 			return get(key) != null;
 		}
 		
