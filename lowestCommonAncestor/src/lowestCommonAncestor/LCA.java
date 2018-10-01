@@ -109,7 +109,7 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		private Node intToKey(Node node, int passedInt) {     
 			int leftSize = (size(node.left));  
 			
-			
+			//to find the node with the right key passed into it, check whether it is in the left or right subtree
 			if (leftSize > passedInt) {
 				return intToKey(node.left,  passedInt); 
 			}
