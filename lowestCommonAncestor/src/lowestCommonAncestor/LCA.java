@@ -88,6 +88,22 @@ public class LCA <Key extends Comparable<Key>, Value>{
 				return 1 + Math.max(height(x.left), height(x.right));
 			}
 		}
+		
+		
+		// return the median key or null if it is empty
+		public Key median() {
+			if (isEmpty()) return null; //returning null if the bst is empty
+
+			else {
+				int median=(((size(root)+1)/2)-1);   //add 1 to size(root)	
+				//need to change int to key?
+				return intToKey(median);
+			}
+		}
+		private Key intToKey(int median) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 
 }
 
