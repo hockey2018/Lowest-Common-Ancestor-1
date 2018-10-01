@@ -25,6 +25,12 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		return size(); //root
 		
 	}
+	
+		private int size(Node x) {
+			if (x == null) return 0;
+
+			else return x.N;
+		}
 
 }
 
