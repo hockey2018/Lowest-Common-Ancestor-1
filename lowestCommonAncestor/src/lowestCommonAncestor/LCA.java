@@ -105,5 +105,20 @@ public class LCA <Key extends Comparable<Key>, Value>{
 			return null;
 		}
 
+	
+		private Node intToKey(Node node, int passedInt) {     
+			int leftSize = (size(node.left));  
+			
+			
+			if (leftSize > passedInt) {
+				return intToKey(node.left,  passedInt); 
+			}
+			else if (leftSize < passedInt) {
+				return intToKey(node.right, passedInt-leftSize-1); 
+			}
+			else {
+				return node; 
+			}
+		} 
 }
 
