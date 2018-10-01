@@ -78,9 +78,15 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		public int height() { 
 			return height(root); 
 		}
-		private int height(LCA<Key, Value>.Node root2) {
-			// TODO Auto-generated method stub
-			return 0;
+	
+		
+		private int height(Node x) {
+			if (x == null) {
+				return -1;
+			}
+			else {
+				return 1 + Math.max(height(x.left), height(x.right));
+			}
 		}
 
 }
