@@ -56,14 +56,21 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		}
 		
 		
-		private LCA<Key, Value>.Node put(LCA<Key, Value>.Node root2, Key key, Value val) {
-			// TODO Auto-generated method stub
-			return null;
-		}
+	
+	
 		
 		private void delete(Key key) {
 			// TODO Auto-generated method stub
 			
+		}
+		private Node put(Node node, Key key, Value val) {
+			if (node == null) return new Node(key, val, 1); //new bst
+			int cmp = key.compareTo(node.key);
+			if      (cmp < 0) node.left  = put(node.left,  key, val);
+			else if (cmp > 0) node.right = put(node.right, key, val);
+			else              node.val   = val; //updating value
+			node.N = 1 + size(node.left) + size(node.right); // value child1 + value child2 + 1
+			return node;
 		}
 }
 
