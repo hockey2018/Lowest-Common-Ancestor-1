@@ -119,6 +119,28 @@ public class LCA <Key extends Comparable<Key>, Value>{
 			else {
 				return node; 
 			}
+			public String printKeysInOrder() {
+				//this will print out a string with all the keys in order with parenthisis
+				String res= "";
+				if (isEmpty()){
+					return res += "()";
+				}
+				else {
+					return res = printKeysInOrder(root);
+				}
+			
+			}
 		} 
+		 private String printKeysInOrder(Node node) {
+			 String res = "";
+			 if (node == null) {
+				 return res += "()";
+			 }
+			 
+			 else {
+				return res += ("(" + printKeysInOrder(node.left) + node.key.toString() + printKeysInOrder(node.right) + ")");
+			 }
+			 
+		 }
 }
 
