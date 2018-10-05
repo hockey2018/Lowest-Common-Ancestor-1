@@ -160,5 +160,16 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		    	}
 				
 			}
-}
+		 
+		 public void delete1(Key key) {
+			 //should delete the key
+		 
+				root = delete(root, key);	
+			}
+			
+			private Node delete (Node node, Key key) {
+				if (node == null) { 
+					return null;
+				}
+			}
 
