@@ -171,5 +171,33 @@ public class LCA <Key extends Comparable<Key>, Value>{
 				if (node == null) { 
 					return null;
 				}
+				 int compare = key.compareTo(node.key);
+			        
+			        if   (compare > 0) {
+			        	node.right = delete(node.right, key);
+			        	node.left  = delete(node.left,  key);
+			        }
+			        else if (compare < 0) {
+			        	node.left  = delete(node.left,  key);
+			        }
+			        else {
+			        	if (node.right == null) {
+			        		return node.left;
+			        	}
+			            if (node.left  == null) {
+			            	return node.right;
+			            }
+			            Node temp = node;
+			            node = max(temp.left);                              
+			            node.left = deleteMax(temp.left);                 
+			            node.right = temp.right; 
+			        }
+			        
+			        node.N = size(node.left) + size(node.right) + 1;
+			        return node;
+					
+				}
+				
+				
 			}
 
