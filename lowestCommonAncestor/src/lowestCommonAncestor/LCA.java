@@ -198,6 +198,14 @@ public class LCA <Key extends Comparable<Key>, Value>{
 					
 				}
 				
+			private Node deleteMax(Node node) 
+		    {
+		        if (node.right == null) return node.left;
+		        node.right = deleteMax(node.right);
+		        node.N = size(node.left) + size(node.right) + 1;                                 
+		        return node;
+		    }
+			
 				
 			}
 
