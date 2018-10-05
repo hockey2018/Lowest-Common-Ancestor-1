@@ -144,5 +144,11 @@ public class LCA <Key extends Comparable<Key>, Value>{
 			 }
 			 
 		 }
+		 
+		 public String prettyPrintKeys() {
+			 //print each node in the tree
+				if(isEmpty()) return "-null\n";
+			     return prettyPrint(root,"");
+			}
 }
 
