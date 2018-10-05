@@ -206,6 +206,13 @@ public class LCA <Key extends Comparable<Key>, Value>{
 		        return node;
 		    }
 			
+			public Node max(Node node)
+			   {
+			     if(node.right!=null) {
+			       return max(node.right);
+			     }
+			     return node;
+			   }
 				
 			}
 
