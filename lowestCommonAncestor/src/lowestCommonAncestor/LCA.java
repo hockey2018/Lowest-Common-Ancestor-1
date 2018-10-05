@@ -150,5 +150,9 @@ public class LCA <Key extends Comparable<Key>, Value>{
 				if(isEmpty()) return "-null\n";
 			     return prettyPrint(root,"");
 			}
+		private String prettyPrint(LCA<Key, Value>.Node root2, String string) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 }
 
