@@ -24,6 +24,47 @@ public void testLCA() {
 
 private void assertSame(String string, Object object, Integer lowestCommonAncestor) {
 	// TODO Auto-generated method stub
+	@Test
+	public void testPrettyPrint() {
+		LCA<Integer, Integer> LCA = new LCA<Integer, Integer>();
+		assertEquals("Checking pretty printing of empty tree",
+				"-null\n", LCA.prettyPrintKeys());
+
+		
+		LCA.put(7, 7);      
+		LCA.put(8, 8);      
+		LCA.put(3, 3);    
+		LCA.put(1, 1);      
+		LCA.put(2, 2);      
+		LCA.put(6, 6);       
+		LCA.put(4, 4);      
+		LCA.put(5, 5);       
+		
+
+		String result = 
+				"-7\n" +
+						" |-3\n" + 
+						" | |-1\n" +
+						" | | |-null\n" + 
+						" | |  -2\n" +
+						" | |   |-null\n" +
+						" | |    -null\n" +
+						" |  -6\n" +
+						" |   |-4\n" +
+						" |   | |-null\n" +
+						" |   |  -5\n" +
+						" |   |   |-null\n" +
+						" |   |    -null\n" +
+						" |    -null\n" +
+						"  -8\n" +
+						"   |-null\n" +
+						"    -null\n";
+		assertEquals("Checking pretty printing of non-empty tree", result, LCA.prettyPrintKeys());
+
+
+	}
+
+
 	
 }
 }
