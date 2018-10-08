@@ -31,7 +31,7 @@ private void assertSame(String string, Object object, Integer lowestCommonAncest
 				"-null\n", LCA.prettyPrintKeys());
 
 		
-		LCA.put(7, 7);      
+		LCA.put(7, 7);      //building
 		LCA.put(8, 8);      
 		LCA.put(3, 3);    
 		LCA.put(1, 1);      
