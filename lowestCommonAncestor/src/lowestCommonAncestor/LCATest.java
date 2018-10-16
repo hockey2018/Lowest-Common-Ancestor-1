@@ -69,6 +69,4 @@ private void assertSame(String string, Object object, Integer lowestCommonAncest
 		
 		
 	}
-	
-}
 }
