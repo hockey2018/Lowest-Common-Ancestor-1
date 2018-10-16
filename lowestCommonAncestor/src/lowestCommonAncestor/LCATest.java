@@ -65,8 +65,9 @@ private void assertSame(String string, Object object, Integer lowestCommonAncest
 	}
 
 //still wont commit 22
-	public class test{ vv ff
+	public class test{ 
 		
 		// this is a test
+		test() {}
 	}
 }
