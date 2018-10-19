@@ -63,11 +63,40 @@ private void assertSame(String string, Object object, Integer lowestCommonAncest
 
 
 	}
+	@Test
+	public void testDelete() {
+		LCA<Integer, Integer> LCA = new LCA<Integer, Integer>();
+		LCA.delete(1);
+		assertEquals("Deleting from empty tree", "()", LCA.printKeysInOrder());
 
-//still wont commit 22
-	public class test{ 
+		LCA.put(7, 7);   
+		LCA.put(8, 8);   
+		LCA.put(3, 3);   
+		LCA.put(1, 1);  
+		LCA.put(2, 2); 
+		LCA.put(6, 6); 
+		LCA.put(4, 4);   
+		LCA.put(5, 5);   
 		
-		// this is a test again
-		test() {}
+
+		assertEquals("Checking order of constructed tree",
+				"(((()1(()2()))3((()4(()5()))6()))7(()8()))", LCA.printKeysInOrder());
+
+		LCA.delete(9);
+		assertEquals("Deleting non-existent key",
+				"(((()1(()2()))3((()4(()5()))6()))7(()8()))", LCA.printKeysInOrder());
+
+		LCA.delete(8);
+		assertEquals("Deleting leaf", "(((()1(()2()))3((()4(()5()))6()))7())", LCA.printKeysInOrder());
+
+		LCA.delete(6);
+		assertEquals("Deleting node with single child",
+				"(((()1(()2()))3(()4(()5())))7())", LCA.printKeysInOrder());
+
+		LCA.delete(3);
+		assertEquals("Deleting node with two children",
+				"(((()1())2(()4(()5())))7())", LCA.printKeysInOrder());
+	}
+
 	}
 }
