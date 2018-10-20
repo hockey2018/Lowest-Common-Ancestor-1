@@ -200,5 +200,12 @@ private void assertSame(String string, Object object, Integer lowestCommonAncest
 		LCA.put(5, 5);
 		assertEquals("Testing median", "4", LCA.median().toString());
 	}
+	@Test
+	public void testContains() {
+		LCA<Integer, Integer> LCA = new LCA<Integer, Integer>();
+		assertEquals("Testing contains", false, LCA.contains(1));
+		LCA.put(7, 7); 
+		assertEquals("Testing contains", true, LCA.contains(7));
+	}
 	}
 }
