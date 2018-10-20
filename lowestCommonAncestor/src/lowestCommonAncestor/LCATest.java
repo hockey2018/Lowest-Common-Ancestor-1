@@ -183,6 +183,22 @@ private void assertSame(String string, Object object, Integer lowestCommonAncest
 		assertEquals("Testing height", 4, LCA.height());
 
 	}
-
+	@Test
+	public void testMedian() {
+		LCA<Integer, Integer> LCA = new LCA<Integer, Integer>();
+		assertEquals("Testing median", null, LCA.median());
+		LCA.put(7, 7); 
+		assertEquals("Testing median", "7", LCA.median().toString());
+		LCA.put(8, 8);   
+		LCA.put(3, 3);  
+		assertEquals("Testing median", "7", LCA.median().toString());
+		LCA.put(1, 1);      
+		LCA.put(2, 2); 
+		assertEquals("Testing median", "3", LCA.median().toString());
+		LCA.put(6, 6);   
+		LCA.put(4, 4);   
+		LCA.put(5, 5);
+		assertEquals("Testing median", "4", LCA.median().toString());
+	}
 	}
 }
