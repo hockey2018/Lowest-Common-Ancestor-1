@@ -90,5 +90,16 @@ public class DirectedAcyclicForm {
 				}
 			}		
 		}
-		
+		public void addNodeToNodeList (Node n) {
+			nodeList = extendArray(nodeList);
+			nodeList[nodeList.length-1] = n;
+		}
+		// Extend the array by one element
+			@SuppressWarnings("unchecked")
+			public Node[] extendArray(Node[] originalArray) {
+				Node[] copyArray = new DAG.Node[originalArray.length+1];
+				System.arraycopy(originalArray, 0, copyArray, 0, originalArray.length);
+				return copyArray;
+			}
+
 }
