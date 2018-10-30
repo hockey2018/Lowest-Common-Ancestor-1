@@ -36,4 +36,17 @@ public class DirectedAcyclicForm {
 		}
 		return valInList;
 	}
+	
+		public Node retrieveNodefromVal (Value v){
+			//returns a node value as it converts value to a node
+			Node nodeToRet = new Node(null); 				
+			for (int i=0; i<nodeList.length; i++){
+				if (nodeList[i].val == v){
+					nodeToRet = nodeList[i];
+					break;			
+				}	
+			}
+			return nodeToRet;
+		}
+
 }
