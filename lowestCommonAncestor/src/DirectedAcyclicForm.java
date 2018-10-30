@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class DirectedAcyclicForm {
+public class DirectedAcyclicForm<Value> {
 	private class Node {
 		private Value val;					
 		private Node[] successors;			
@@ -97,7 +97,7 @@ public class DirectedAcyclicForm {
 		// Extend the array by one element
 			@SuppressWarnings("unchecked")
 			public Node[] extendArray(Node[] originalArray) {
-				Node[] copyArray = new DAG.Node[originalArray.length+1];
+				Node[] copyArray = new DirectedAcyclicForm.Node[originalArray.length+1];
 				System.arraycopy(originalArray, 0, copyArray, 0, originalArray.length);
 				return copyArray;
 			}
