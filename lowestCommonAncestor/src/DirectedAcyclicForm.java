@@ -20,4 +20,20 @@ public class DirectedAcyclicForm {
 			return false;
 		}
 	}
+	public int size() { 
+		return nodeList.length;  
+		//returns no. of nodes on DAG
+	}
+
+	// Checks whether Node n is in the graph.
+	public boolean contains(Value v) {
+		boolean valInList = false;
+		for (int i=0; i<nodeList.length; i++) {
+			if (nodeList[i].val == v) {
+				valInList = true;
+				break;
+			}			
+		}
+		return valInList;
+	}
 }
