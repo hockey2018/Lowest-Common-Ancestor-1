@@ -48,5 +48,26 @@ public class DirectedAcyclicForm {
 			}
 			return nodeToRet;
 		}
+		public void put(Value v, Value fromVal, Value toVal) {	
+			Node n = new Node(v);
+			Node from = retrieveNodefromVal(fromVal);
+			Node to = retrieveNodefromVal(toVal);
+
+			if (fromVal != null) {
+				from.successors = extendArray(from.successors); 
+				from.successors[from.successors.length-1] = n;
+				if (from.val == null) {
+					addNodeToNodeList(from); 
+				}
+			}
+			if (toVal != null) {
+				n.successors = extendArray(n.successors);
+				n.successors[n.successors.length-1] = to;
+				if (to.val == null) {
+					addNodeToNodeList(to);
+				}
+			}
+			addNodeToNodeList(n);	
+		}
 
 }
