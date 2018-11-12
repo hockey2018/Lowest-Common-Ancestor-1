@@ -101,5 +101,9 @@ public class DirectedAcyclicForm<Value> {
 				System.arraycopy(originalArray, 0, copyArray, 0, originalArray.length);
 				return copyArray;
 			}
+			public void addEdge(int i, int j) {
+				// TODO Auto-generated method stub
+				
+			}
 
 }
