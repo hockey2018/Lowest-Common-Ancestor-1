@@ -9,7 +9,7 @@ public void testLCA() {
 		assertSame("Testing LCA for null root", null, bst.lowestCommonAncestor(bst.root, 1, 2));
 		
 		bst.put(7, 7);   
-		bst.put(8, 8);   
+		bst.put(8, 8);  // test change sb 
 		bst.put(3, 3);   
 		bst.put(1, 1);   //jjjjjj testststshh
 		bst.put(2, 2);   //kkk
